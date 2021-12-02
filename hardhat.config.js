@@ -1,9 +1,6 @@
 const { task, types } = require("hardhat/config");
 require("@nomiclabs/hardhat-waffle");
-require("hardhat-abi-exporter");
 require("hardhat-gas-reporter");
-require("solidity-coverage");
-require("hardhat-contract-sizer");
 
 require("dotenv").config();
 
@@ -76,14 +73,6 @@ module.exports = {
             url: "http://127.0.0.1:8545",
             gasPrice: 180000000000,
         },
-    },
-    abiExporter: {
-        path: "./abis",
-        clear: true,
-        flat: true,
-        only: [":NFT", ":INFTPotionValidator$"],
-        spacing: 2,
-        pretty: false,
     },
     gasReporter: {
         currency: "EUR",
