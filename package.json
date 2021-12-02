@@ -4,7 +4,8 @@
     "scripts": {
         "test-hardhat": "npx hardhat test",
         "run-ganache": "npx ganache-cli",
-        "test-ganache": "npx hardhat --network localhost test"
+        "test-ganache": "npx hardhat --network localhost test",
+        "test-rinkeby": "npx hardhat --network rinkeby test"
     },
     "repository": {
         "type": "git",
