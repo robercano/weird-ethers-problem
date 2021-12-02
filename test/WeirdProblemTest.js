@@ -31,8 +31,15 @@ describe(`Weird Problem Test`, function () {
 
         console.log(`        Gas used: ${receipt.gasUsed}`);
     });
-    it(`This one doesn't`, async function () {
+    it(`This one doesn't in hardhat but does in ganache`, async function () {
         let param = Array(1911).fill(1239812391823);
+
+        console.log(`        Total size: ${param.length * 32}`);
+
+        await WeirdEthersProblemContract.problemFunction(param);
+    });
+    it(`This one does also works in ganache`, async function () {
+        let param = Array(10000).fill(1239812391823);
 
         console.log(`        Total size: ${param.length * 32}`);
 
